@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+.flex-wrapper {
+    display: flex;
+    
+}
+
+.grid-wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+.grid-wrapper > div {
+    padding-top: 15px;
+}
+.left > div:not(:first-child) {
+    padding-top: 40px;
+}
+.nav > div, .settings > div {
+    padding-top: 12px;
+}
+
+.right {
+  background-color: grey;
+  grid-area: 2/3/3/4;
+}
+
+.left {
+  background-color: blue;
+  grid-area: 1/1/3/2;
+  padding-left: 24px;
+  font-size: 32px;
+}
+.top-bar {
+  grid-area: 1/2/1/4;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar > div {
+    flex: 1;
+}
+
+.top-bar > .flex-wrapper {
+    justify-content: space-between;
+    padding: 0 64px 0 64px;
+}
+
+.main {
+  background-color: grey;
+  grid-area: 2/2/3/3;
+}
+
+.left {
+    color: white;
+}
+
+.settings object {
+    height: 15px;
+    width: 15px;
+}
